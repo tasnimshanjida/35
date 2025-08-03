@@ -56,18 +56,7 @@
   padding: 40px; /* Optional: adds space around the gallery */
 }
 
-.CERTIFICATION-entry {
-  display: none;
-  width: 80%; /* Increased from 30% to 80% */
-  max-width: 600px; /* Optional: prevents too large on wide screens */
-}
 
-.CERTIFICATION-entry img {
-  width: 100%;
-  height: auto;
-  border-radius: 12px; /* Optional: rounded corners */
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2); /* Optional: adds shadow */
-}
 🔧 Only this change is neede
 
 </style>
@@ -267,7 +256,7 @@
   const images = [
     "images/shanjida.jpeg",
     "images/sh2.jpeg",
-    "images/s1.jpeg"
+    "images/sh4.jpeg"
   ];
 
   let currentImage = 0;
@@ -366,7 +355,7 @@
 
 
 <!-- education start -->
-<section id="section-education" class="education-section" style="background-color: #8c8ea3;">
+<section id="section-education" class="education-section" style="background-color: #b8b9c4;">
   <style>
     .education-section {
       padding: 40px 20px;
@@ -374,7 +363,7 @@
     }
 
     .section-heading h2 {
-      color: #f05507;
+      color: #f76c27;
       font-size: 2.2rem;
 
 
@@ -390,36 +379,35 @@
     }
 
     .education-card {
-      background: #1c1c1c;
+      background:  #cb7afa;
       border-left: 5px solid #f05507;
       padding: 20px 25px;
       width: 100%;
       max-width: 600px;
       border-radius: 10px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      box-shadow: 0 4px 12px  #131212;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
     .education-card:hover {
       transform: translateY(-5px);
-      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.35);
-    }
+      box-shadow: 0 8px 18px #131212;
 
     .education-card .year {
-      color: #bbbbbb;
+      color: #131212;
       font-size: 0.95rem;
       margin-bottom: 4px;
     }
 
     .education-card .degree {
-      color: #ffffff;
+      color: #0c0c0c;
       font-size: 1.3rem;
       font-weight: 600;
       margin-bottom: 3px;
     }
 
     .education-card .institution {
-      color: #dddddd;
+      color: #101011;
       font-size: 1rem;
       font-style: italic;
     }
@@ -433,7 +421,7 @@
       My educational journey reflects a continuous path of learning, self-development, and achievement. Each stage has played a significant role in shaping who I am today.
     </p>
   </div>
-  <div class="education-container">
+  <div style="color: #050000;" class="education-container">
     <div class="education-card">
   <h4 class="year">2019</h4>
   <h3 class="degree">SSC</h3>
@@ -441,14 +429,14 @@
   <p class="edu-details">Completed Secondary School Certificate with distinction in Science group.</p>
 </div>
 
-<div class="education-card">
+<div style="color: #050000;"class="education-card">
   <h4 class="year">2021</h4>
   <h3 class="degree">HSC</h3>
   <p class="institution">Shaheed Bir Uttam Lt Anwar Girls College</p>
   <p class="edu-details">Successfully passed Higher Secondary Certificate focusing on science subjects.</p>
 </div>
 
-<div class="education-card">
+<div style="color: #050000;" class="education-card">
   <h4 class="year">2023–2025</h4>
   <h3 class="degree">B.Sc</h3>
   <p class="institution">University of Asia Pacific</p>
@@ -468,46 +456,68 @@
 
     <div class="circle-skill-grid">
       <div class="circle-skill">
-        <div class="circle" style="--percent: 65; --color: #FF6A00;">
+        <div class="circle" style="--percent: 65; --color: #e9721e;">
           <div class="number">65%</div>
         </div>
         <div class="label">HTML</div>
       </div>
 
       <div class="circle-skill">
-        <div class="circle" style="--percent: 60; --color: #4b6cb7;">
+        <div class="circle" style="--percent: 60; --color: #3e72eb;">
           <div class="number">60%</div>
         </div>
         <div class="label">CSS</div>
       </div>
 
       <div class="circle-skill">
-        <div class="circle" style="--percent: 50; --color: #FFD500;">
+        <div class="circle" style="--percent: 50; --color: #e4bf0a;">
           <div class="number">50%</div>
         </div>
         <div class="label">JavaScript</div>
       </div>
 
       <div class="circle-skill">
-        <div class="circle" style="--percent: 90; --color: #0072ff;">
+        <div class="circle" style="--percent: 90; --color: #7f52e7;">
           <div class="number">90%</div>
         </div>
         <div class="label">MS Word</div>
       </div>
 
       <div class="circle-skill">
-        <div class="circle" style="--percent: 80; --color: #ff6a6a;">
+        <div class="circle" style="--percent: 80; --color: #ec2929;">
           <div class="number">80%</div>
         </div>
         <div class="label">Photoshop</div>
       </div>
     </div>
   </div>
+  <script>
+  const circles = document.querySelectorAll(".circle-skill");
+  let step = 1;
+
+  function updateSkillDisplay() {
+    // Hide all circles
+    circles.forEach((el) => el.style.display = "none");
+
+    // Show up to `step` circles
+    for (let i = 0; i < step && i < circles.length; i++) {
+      circles[i].style.display = "block";
+    }
+
+    // Increase step or reset
+    step = step % circles.length + 1;
+  }
+
+  // Start
+  updateSkillDisplay();
+  setInterval(updateSkillDisplay, 3000); // Update every 3 seconds
+</script>
+
 </section>
 
 <style>
 .skills-section {
-  background: #a09fb4;
+  background: #a8a8aa;
   padding: 60px 20px;
   font-family: 'Segoe UI', sans-serif;
   color: #fff;
@@ -520,12 +530,12 @@
 
 .section-header h2 {
   font-size: 2.5em;
-  color: #fff;
+  color: #0a8d15;
   margin-bottom: 10px;
 }
 
 .section-header p {
-  color: #eaeaea;
+  color: #080808;
   font-size: 1em;
 }
 
@@ -580,76 +590,79 @@
 }
 </style>
 
-<section class="site-section" id="section-certificates" style="background-color: #babdbe;">
+<section class="site-section" id="section-certificates" style="background-color: #acb5b8; padding: 60px 0;">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 mb-5">
+        <div class="section-heading text-center">
+          <h2 class="mb-5" style="color: rgb(105, 116, 15);">My Achievement</h2>
+        </div>
+      </div>
+    </div>
 
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12 mb-5">
-					<div class="section-heading text-center">
-						<h2 class="mb-5" style="color: black;">My Achivment</h2>
-					</div>
-				</div>
-			</div>
+    <div class="row">
+      <!-- Certificate 1 -->
+      <div class="col-sm-6 col-lg-4 mb-4">
+        <div class="certificate-entry">
+          <a href="#"><img src="images/p12.jpeg" alt="Certificate 1" class="img-fluid"></a>
+        </div>
+      </div>
 
-			<div class="row">
-				<div class="col-sm-6 col-lg-4 mb-4">
-					<div class="CERTIFICATION-entry">
-						<a href="#"><img src="images/p12.jpeg" alt="Image placeholder" class="img-fluid"></a>
-					
-					</div>
-				</div>
+      <!-- Certificate 2 -->
+      <div class="col-sm-6 col-lg-4 mb-4">
+        <div class="certificate-entry">
+          <a href="#"><img src="images/p13.jpeg" alt="Certificate 2" class="img-fluid"></a>
+        </div>
+      </div>
 
-				<div class="col-sm-6 col-lg-4 mb-4">
-					<div class="CERTIFICATION-entry">
-						<a href="#"><img src="images/p13.jpeg" alt="Image placeholder" class="img-fluid"></a>
-					</div>
-				</div>
+      <!-- Certificate 3 -->
+      <div class="col-sm-6 col-lg-4 mb-4">
+        <div class="certificate-entry">
+          <a href="#"><img src="images/p14.jpeg" alt="Certificate 3" class="img-fluid"></a>
+        </div>
+      </div>
+    </div>
+  </div>
 
-				<div class="col-sm-6 col-lg-4 mb-4">
-					<div class="CERTIFICATION-entry">
-						<a href="#"><img src="images/p14.jpeg" alt="Image placeholder" class="img-fluid"></a>
-						
-					</div>
-				</div>
-
-			</div>
-		</div>
-     <script>
-    const entries = document.querySelectorAll('.CERTIFICATION-entry');
-    let step = 1;
-
-    function updateDisplay() {
-      // Hide all first
-      entries.forEach(e => e.style.display = 'none');
-
-      // Show 1, then 2, then 3
-      for (let i = 0; i < step && i < entries.length; i++) {
-        entries[i].style.display = 'block';
-      }
-
-      step = step % 3 + 1; // Cycle: 1 → 2 → 3 → 1 → ...
+  <style>
+    .certificate-entry {
+      background-color: #fff;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
     }
 
-    // Start display cycle
-    updateDisplay();
-    setInterval(updateDisplay, 3000); // Every 3 seconds
-  </script>
+    .certificate-entry:hover {
+      transform: translateY(-5px);
+    }
 
+    .certificate-entry img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
 
-	</section>
+    @media (max-width: 767px) {
+      .certificate-entry {
+        margin-bottom: 20px;
+      }
+    }
+  </style>
+</section>
 
-<section class="site-section" id="section-my-hobbies" style="background-color: #666565;">
+<section class="site-section" id="section-my-hobbies" style="background-color: #bbabab;">
   <div class="container">
     <div class="row">
       <div class="section-heading text-center col-md-12">
-        <h2>Featured <strong>My Hobbies</strong></h2>
+        <h2 style="color: #182848;">Featured <strong>My Hobbies</strong></h2>
       </div>
     </div>
   </div>
 
     <div class="filters">
       <ul>
-        <li class="active" data-filter="*">All</li>
+        <li style="color: #050000;" class="active" data-filter="*">All</li>
         <li data-filter=".cooking">Cooking</li>
         <li data-filter=".gardening">Gardening</li>
         <li data-filter=".travel">Travel</li>
@@ -716,14 +729,15 @@
           </div>
         </div>
 
-        <!-- Gardening 2 -->
+        
+ <!-- Gardening 2 -->
         <div class="single-portfolio col-sm-4 all gardening">
           <div class="relative">
             <div class="thumb">
               <div class="overlay overlay-bg"></div>
-              <img class="image img-fluid" src="images/p4.jpeg" alt="">
+              <img class="image img-fluid" src="images/p22.jpeg" alt="">
             </div>
-            <a href="images/p4.jpeg" class="img-pop-up">
+            <a href="images/p22.jpeg" class="img-pop-up">
               <div class="middle">
                 <div class="text align-self-center d-flex"><img src="images/preview.png" alt=""></div>
               </div>
@@ -734,6 +748,25 @@
             <div class="cat">Gardening</div>
           </div>
         </div>
+         <!-- Gardening 3 -->
+        <div class="single-portfolio col-sm-4 all gardening">
+          <div class="relative">
+            <div class="thumb">
+              <div class="overlay overlay-bg"></div>
+              <img class="image img-fluid" src="images/p23.jpeg" alt="">
+            </div>
+            <a href="images/p23.jpeg" class="img-pop-up">
+              <div class="middle">
+                <div class="text align-self-center d-flex"><img src="images/preview.png" alt=""></div>
+              </div>
+            </a>
+          </div>
+          <div class="p-inner">
+            <h4>My Garden</h4>
+            <div class="cat">Gardening</div>
+          </div>
+        </div>
+
 
         <!-- Travel 1 -->
         <div class="single-portfolio col-sm-4 all travel">
@@ -811,14 +844,50 @@
           </div>
         </div>
 
-        <!-- Photography 2 -->
+        <!-- Photography 1 -->
         <div class="single-portfolio col-sm-4 all photography">
           <div class="relative">
             <div class="thumb">
               <div class="overlay overlay-bg"></div>
-              <img class="image img-fluid" src="images/p9.jpeg" alt="">
+              <img class="image img-fluid" src="images/p27.jpeg" alt="">
             </div>
-            <a href="images/p9.jpeg" class="img-pop-up">
+            <a href="images/p27.jpeg" class="img-pop-up">
+              <div class="middle">
+                <div class="text align-self-center d-flex"><img src="images/preview.png" alt=""></div>
+              </div>
+            </a>
+          </div>
+          <div class="p-inner">
+            <h4>My Photography</h4>
+            <div class="cat">Photography</div>
+          </div>
+        </div>
+ <!-- Photography 3 -->
+        <div class="single-portfolio col-sm-4 all photography">
+          <div class="relative">
+            <div class="thumb">
+              <div class="overlay overlay-bg"></div>
+              <img class="image img-fluid" src="images/19.jpeg" alt="">
+            </div>
+            <a href="images/19.jpeg" class="img-pop-up">
+              <div class="middle">
+                <div class="text align-self-center d-flex"><img src="images/preview.png" alt=""></div>
+              </div>
+            </a>
+          </div>
+          <div class="p-inner">
+            <h4>My Photography</h4>
+            <div class="cat">Photography</div>
+          </div>
+        </div>
+         <!-- Photography 3 -->
+        <div class="single-portfolio col-sm-4 all photography">
+          <div class="relative">
+            <div class="thumb">
+              <div class="overlay overlay-bg"></div>
+              <img class="image img-fluid" src="images/p20.jpeg" alt="">
+            </div>
+            <a href="images/p20.jpeg" class="img-pop-up">
               <div class="middle">
                 <div class="text align-self-center d-flex"><img src="images/preview.png" alt=""></div>
               </div>
@@ -861,11 +930,11 @@
 
 
 
-<section class="site-section pb-0" id="section-my-future-plan" style="background-color: rgb(169, 169, 175);">
+<section class="site-section pb-0" id="section-my-future-plan" style="background-color: rgb(141, 141, 141);">
   <style>
     .future-title {
       text-align: center;
-      color: #222;
+      color: #6a4ac4;
       font-size: 36px;
       font-weight: 700;
       margin-bottom: 60px;
@@ -995,7 +1064,7 @@
   </script>
 </section>
 
-<section class="site-section" id="section-contact" style="background-color:#c0c1c5">
+<section class="site-section" id="section-contact" style="background-color:#dbc1b7">
   <div class="container">
     <div class="row">
       <div class="col-md-12 mb-5">
@@ -1058,11 +1127,11 @@
       max-height: 0;
       opacity: 0;
       overflow: hidden;
-      transition: opacity 0.7s ease, max-height 0.7s ease;
+      transition: opacity 0.3s ease, max-height 0.3s ease;
     }
 
     .site-contact-details li.show {
-      max-height: 200px; /* enough for content */
+      max-height: 100px; /* enough for content */
       opacity: 1;
     }
 
