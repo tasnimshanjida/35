@@ -198,7 +198,7 @@
   .site-form input[type="text"],
   .site-form input[type="email"],
   .site-form textarea {
-    background-color:#6f91bd;  /* Pure white */
+    background-color:#5781b9;  /* Pure white */
     color: black;            /* Optional: make sure text is visible */
   }
   .filter-tabs {
@@ -285,8 +285,8 @@
   // Background slideshow
   const images = [
     "images/shanjida.jpeg",
-    "images/sh2.jpeg",
-    "images/sh111.jpeg"
+    "images/sh23.jpg",
+    "images/sh1112.jpeg"
   ];
 
   let currentImage = 0;
@@ -298,7 +298,7 @@
   }
 
   changeBackgroundImage(); // Set first image
-  setInterval(changeBackgroundImage, 4000); // Change every 4 seconds
+  setInterval(changeBackgroundImage, 2000); // Change every 4 seconds
 </script>
   <script>
   const name = "Shanjida Akter";
@@ -323,9 +323,7 @@
 </section>
 
 <!--ABOUT SECTION-->
-  <!--ABOUT SECTION-->
-   <section class="about-section" id="section-about">
-
+<section class="about-section" id="section-about">
   <div class="about-container">
 
     <!-- Left Image Section -->
@@ -337,43 +335,25 @@
     <div class="about-text">
       <span class="intro-title">My Intro</span>
       <h2>About <strong>Me</strong></h2>
-      <div class="paragraph-loop">
-        <p class="loop-text active">
-
+      <div class="about-paragraphs">
+        <p style="color: #050000;">
           Hi, I'm <strong>Shanjida Akter</strong>. A passionate student exploring the world of <strong>Web Design</strong>. I'm currently studying <strong>Computer Science and Engineering</strong> at the <em>University of Asia Pacific</em>.
         </p>
-        <p class="loop-text">
+        <p style="color: #050000;">
           My current focus is learning how to create beautiful, functional, and responsive websites using modern design principles and front-end technologies.
-        </p>
-        <p class="loop-text">
+        </p >
+        <p style="color: #050000;">
           I enjoy turning ideas into reality with HTML, CSS, and JavaScript. Let’s build something great together!
         </p>
       </div>
     </div>
 
   </div>
-   <script>
-  const paragraphs = document.querySelectorAll('.loop-text');
-  const textColors = ['text-color-1', 'text-color-2', 'text-color-3'];
-  let currentIndex = 0;
-
-  setInterval(() => {
-    // Remove active and old text color class
-    paragraphs[currentIndex].classList.remove('active');
-    textColors.forEach(c => paragraphs[currentIndex].classList.remove(c));
-
-    // Next paragraph index
-    currentIndex = (currentIndex + 1) % paragraphs.length;
-
-    // Add active and new text color class
-    paragraphs[currentIndex].classList.add('active');
-    paragraphs[currentIndex].classList.add(textColors[currentIndex % textColors.length]);
-  }, 3000);
-</script>
-
-
-
 </section>
+
+
+
+
 
 
 
@@ -1093,7 +1073,7 @@
     }
 
     updateCardsVisibility(); // Initial display
-    setInterval(updateCardsVisibility, 2000); // Loop every 4 seconds
+    setInterval(updateCardsVisibility, 1500); // Loop every 4 seconds
   </script>
 </section>
 
@@ -1113,16 +1093,16 @@
             <input type="text" class="form-control px-3 py-4" placeholder="Your Name" />
           </div>
           <div class="form-group">
-            <input type="email" class="form-control px-3 py-4" placeholder="Your Email" />
+            <input type="email" class="form-control px-3 py-4" placeholder="Your Email"/>
           </div>
           <div class="form-group">
-            <input type="email" class="form-control px-3 py-4" placeholder="Your Phone" />
+            <input type="email" class="form-control px-3 py-4" placeholder="Your Phone"/>
           </div>
           <div class="form-group mb-5">
             <textarea class="form-control px-3 py-4" cols="30" rows="10" placeholder="Write a Message"></textarea>
           </div>
           <div class="form-group">
-            <input type="submit" class="btn btn-primary px-4 py-3" value="Send Message" />
+            <input type="submit" class="btn btn-primary px-4 py-3" value="Send Message" style="color: #070707;"/>
           </div>
         </form>
       </div>
@@ -1155,40 +1135,6 @@
     </div>
   </div>
 
-  <style>
-    .site-contact-details li {
-      max-height: 0;
-      opacity: 0;
-      overflow: hidden;
-      transition: opacity 0.3s ease, max-height 0.3s ease;
-    }
-
-    .site-contact-details li.show {
-      max-height: 100px; /* enough for content */
-      opacity: 1;
-    }
-
-  </style>
-
-  <script>
-    const contactItems = document.querySelectorAll(".site-contact-details li");
-    let count = 2;
-
-    function showItems() {
-      contactItems.forEach((item, idx) => {
-        if (idx < count) {
-          item.classList.add("show");
-        } else {
-          item.classList.remove("show");
-        }
-      });
-      count++;
-      if (count > contactItems.length) count = 2;
-    }
-
-    showItems(); // initial call
-    setInterval(showItems, 1500);
-  </script>
 </section>
 
 
