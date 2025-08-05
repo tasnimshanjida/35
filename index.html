@@ -990,7 +990,7 @@
       align-items: center;
       text-align: center;
       color: #fff; /* white text for colored backgrounds */
-      transition: transform 0.3s ease, box-shadow 0.2s ease;
+      transition: transform 0.1s ease, box-shadow 0.5s ease;
       position: relative;
       overflow: hidden;
       box-shadow: 0 12px 30px rgba(0,0,0,0.15);
@@ -1093,7 +1093,7 @@
     }
 
     updateCardsVisibility(); // Initial display
-    setInterval(updateCardsVisibility, 4000); // Loop every 4 seconds
+    setInterval(updateCardsVisibility, 2000); // Loop every 4 seconds
   </script>
 </section>
 
@@ -1172,7 +1172,7 @@
 
   <script>
     const contactItems = document.querySelectorAll(".site-contact-details li");
-    let count = 1;
+    let count = 2;
 
     function showItems() {
       contactItems.forEach((item, idx) => {
@@ -1183,11 +1183,11 @@
         }
       });
       count++;
-      if (count > contactItems.length) count = 1;
+      if (count > contactItems.length) count = 2;
     }
 
     showItems(); // initial call
-    setInterval(showItems, 3500);
+    setInterval(showItems, 1500);
   </script>
 </section>
 
